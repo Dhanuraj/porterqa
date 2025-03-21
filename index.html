@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+    <h1>Question Search</h1>
+    
+    <div class="filters-container">
+        <select id="callerFilter" class="caller-filter">
+            <option value="all">All Callers</option>
+            <option value="customer">Customer</option>
+            <option value="partner">Partner</option>
+            <option value="vendor">Vendor</option>
+        </select>
+        
+        <input type="text" class="search-box" placeholder="Search by keywords...">
+        <input type="text" class="number-filter" id="numberFilter" placeholder="Search by question number...">
+    </div>
+
+    <div id="results"></div>
+
+    <div class="answer-container">
+        <button class="close-btn">&times;</button>
+        <div class="answer-header">Answer</div>
+        <div id="answerContent"></div>
+        
+        <div class="static-text">
+            Call summary & Resolution -<br>
+            Caller agreed -<br>
+            Follow up -<br>
+            Test Ticket
+        </div>
+
+        <div class="static-text">
+           <h3> ***** Remainder *****</h3><br>
+            Copy caller Number  <br>
+            Put break  <br>
+            
+        </div>
+        
+        <div class="notes-section">
+            <textarea id="noteInput" placeholder="Add important notes here..."></textarea>
+            <button onclick="saveNote()">Save Note</button>
+            <div id="savedNotes"></div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="answers.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
